@@ -35,7 +35,7 @@ fi
 
 METADATA_CSV_FILENAME=$DATA_PATH/"metadata.csv" # 之后会生成关于视频的信息csv的地址【不用改】
 RELEASED_CHECKPOINT=r2plus1d_34-tsp_on_activitynet
-
+#mkdir -p $OUTPUT_DIR
 # Choose the stride between clips, e.g. 16 for non-overlapping clips and 1 for dense overlapping clips
 STRIDE=16
 
@@ -53,7 +53,6 @@ echo "START GENERATE METADATA"
 CUDA_VISIBLE_DEVICES=1 python video_backbone/TSP/data/generate_metadata_csv.py --video-folder $DATA_PATH --output-csv $METADATA_CSV_FILENAME
 
 # FEATURE_DIR=$OUTPUT_FOLDER/${RELEASED_CHECKPOINT}_stride_${STRIDE}/
-mkdir -p $OUTPUT_DIR
 
 echo "START EXTRACT VIDEO FEATURES"
 CUDA_VISIBLE_DEVICES=1 python video_backbone/TSP/extract_features/extract_features.py \
@@ -66,9 +65,9 @@ CUDA_VISIBLE_DEVICES=1 python video_backbone/TSP/extract_features/extract_featur
 --device $DEVICE \
 --output-dir $FEATURE_DIR \
 --workers $WORKER_NUM \
---local-checkpoint '/home/lanyun/xjtu/lyz/PDVC-lyz/r2plus1d_34-tsp_on_activitynet-max_gvf-backbone_lr_0.0001-fc_lr_0.002-epoch_5-0d2cf854.pth'
+--local-checkpoint '/home/james/JA-PDVC/r2plus1d_34-tsp_on_activitynet-max_gvf-backbone_lr_0.0001-fc_lr_0.002-epoch_5-0d2cf854.pth'
 echo "End EXTRACT VIDEO FEATURES"
 #cn数据集全部转为MP4存在 /mnt/mp4video
 #参数：mp4位置  特征输出位置  ckpt位置  中英文选择  
 #bash run_get_video_feature.sh /mnt/mp4video /home/lanyun/xjtu/cm/video-mamba-suite/video-mamba-suite/video-dense-captioning/data/custom /home/lanyun/xjtu/cm/video-mamba-suite/video-mamba-suite/video-dense-captioning/pretrain/model-best.pth en
-bash run_get_video_feature.sh /mnt/mp4video /home/lanyun/xjtu/lyz/PDVC-lyz/data/custom /home/lanyun/xjtu/lyz/PDVC-lyz/model-best-anet.pth en
+#bash run_get_video_feature.sh /mnt/mp4video /home/lanyun/xjtu/lyz/PDVC-lyz/data/custom /home/lanyun/xjtu/lyz/PDVC-lyz/model-best-anet.pth en
