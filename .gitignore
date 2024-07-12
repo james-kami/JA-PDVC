@@ -1,12 +1,4 @@
-# But not these files...
-!visualization/Arial.ttf
-!visualization/xukun_en.gif
-!visualization/NotoSansCJK-Bold.otf
-!visualization/videos/xukun.mp4
-!visualization/visualization.py
-!visualization/xukun_cn.gif
-!visualization/xukun_en.gif
-visualization/*
+visualization/videos/2024Y06M16D00H04M20S00.30.mp4
 save/
 save*
 *.hdf5
