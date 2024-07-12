@@ -1,3 +1,12 @@
+# But not these files...
+!visualization/Arial.ttf
+!visualization/xukun_en.gif
+!visualization/NotoSansCJK-Bold.otf
+!visualization/videos/xukun.mp4
+!visualization/visualization.py
+!visualization/xukun_cn.gif
+!visualization/xukun_en.gif
+visualization/*
 save/
 save*
 *.hdf5
@@ -8,11 +17,6 @@ data/anet/features/resnet_bn
 data/yc2/features/resnet_bn
 data/densevid_eval3
 *.tmp
-visualization/*
-
-# But not these files...
-!visualization/Arial.ttf
-!visualization/xukun_en.gif
 *.Ink
 .idea/
 .DS_Store
