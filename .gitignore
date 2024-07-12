@@ -1,6 +1,7 @@
 save/
 save*
 *.hdf5
+*.pth
 *.npy
 data/anet/features/c3d
 data/anet/features/resnet_bn
