@@ -8,6 +8,7 @@ data/anet/features/resnet_bn
 data/yc2/features/resnet_bn
 data/densevid_eval3
 *.tmp
+visualization/
 /home/james/JA-PDVC/visualization
 
 *.Ink
