@@ -1,0 +1,10 @@
+have to run git submodule update --init --recursive for soda
+pip install opencv-python-headless for missing cv2
+video_folder=/home/james/JA-PDVC/visualization/videos
+output_folder=/home/james/JA-PDVC/visualization/output
+pdvc_model_path=/home/james/JA-PDVC/save/anet_tsp_pdvc/model-best.pth
+output_language=en
+bash test_and_visualize.sh $video_folder $output_folder $pdvc_model_path $output_language
+
+python generate_metadata_csv.py --video-folder /home/james/JA-PDVC/visualization/videos --output-csv /home/james/JA-PDVC/visualization/videos/metadata2.csv
+(JA-PDVC) james@kami3930-1gpu1:~/JA-PDVC$ find . -type f \( -name "*.sh" -o -name "*.py" \)
