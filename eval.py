@@ -41,8 +41,8 @@ def main(opt):
             os.makedirs(folder_path)
     logger = create_logger(folder_path, 'val.log')
     if opt.eval_model_path:
-        model_path = opt.eval_model_path
-        infos_path = os.path.join('/'.join(opt.eval_model_path.split('/')[:-1]), 'info.json')
+        model_path = os.path.join(opt.eval_model_path, 'model-best.pth')
+        infos_path = os.path.join(opt.eval_model_path, 'info.json')
     else:
         model_path = os.path.join(folder_path, 'model-best.pth')
         infos_path = os.path.join(folder_path, 'info.json')
