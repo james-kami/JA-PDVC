@@ -58,14 +58,16 @@ Start Training with PDVC learnt proposals - dense video captioning
 eval_folder=/home/james/JA-PDVC/save/anet_c3d_pdvc
 python eval.py --eval_folder /home/james/JA-PDVC/save/anet_c3d_pdvc --eval_transformer_input_type queries --gpu_id 0
 ```
-# STUCK HERE
+
+Start feature extraction
 Download 3 models (model-best.pth, model-best-anet.pth, and r2plus1d_34-tsp_on_activitynet-max_gvf-backbone_lr_0.0001-fc_lr_0.002-epoch_5-0d2cf854.pth), add custom.yml. add videos.
 ```
 sh run_get_video_feature.sh /home/james/mp4video home/james/JA-PDVC/data/custom /home/james/JA-PDVC/model-best-anet.pth en
 ```
 
-Start feature extraction
+bash test_and_visualize.sh /home/james/JA-PDVC/visualization/two_vids /home/james/JA-PDVC/visualization/output /home/james/JA-PDVC/save/anet_tsp_pdvc en
 
+python train_custom.py --cfg_path /home/james/JA-PDVC/cfgs/custom.yml --gpu_id 0
 
 
 > Written with [StackEdit](https://stackedit.io/).

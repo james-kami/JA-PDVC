@@ -50,12 +50,12 @@ WORKER_NUM=8
 
 echo "START GENERATE METADATA"
 
-CUDA_VISIBLE_DEVICES=1 python video_backbone/TSP/data/generate_metadata_csv.py --video-folder $DATA_PATH --output-csv $METADATA_CSV_FILENAME
+CUDA_VISIBLE_DEVICES=0 python video_backbone/TSP/data/generate_metadata_csv.py --video-folder $DATA_PATH --output-csv $METADATA_CSV_FILENAME
 
 # FEATURE_DIR=$OUTPUT_FOLDER/${RELEASED_CHECKPOINT}_stride_${STRIDE}/
 
 echo "START EXTRACT VIDEO FEATURES"
-CUDA_VISIBLE_DEVICES=1 python video_backbone/TSP/extract_features/extract_features.py \
+CUDA_VISIBLE_DEVICES=0 python video_backbone/TSP/extract_features/extract_features.py \
 --data-path $DATA_PATH \
 --metadata-csv-filename $METADATA_CSV_FILENAME \
 --released-checkpoint $RELEASED_CHECKPOINT \

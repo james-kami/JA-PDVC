@@ -5,16 +5,16 @@ epoch: 100
 caption_decoder_type: standard
 pretrain: 'full'
 pretrain_path: '/home/james/JA-PDVC/model-best.pth'
-train_caption_file: '/home/mp4video/train_anno.json'
-val_caption_file: '/home/mp4video/val_anno.json'
+train_caption_file: '/home/james/JA-PDVC/data/custom/train_anno.json'
+val_caption_file: '/home/james/JA-PDVC/data/custom/val_anno.json'
 min_epoch_when_save : 0
 visual_feature_type: ['tsp']
-visual_feature_folder: ['/home/lanyun/xjtu/cm/video-mamba-suite/video-mamba-suite/video-dense-captioning/data/custom']
+visual_feature_folder: ['/home/james/JA-PDVC/data/custom']
 feature_dim: 512
 invalid_video_json: []
 train_proposal_file: data/generated_proposals/dbg_trainval_top100.json
 eval_proposal_file: data/generated_proposals/dbg_trainval_top100.json
-gt_file_for_eval: ['/mnt/mp4video/val_anno.json']
+gt_file_for_eval: ['/home/james/JA-PDVC/data/custom/val_anno.json']
 gt_file_for_para_eval: ['data/anet/captiondata/para/anet_entities_val_1_para.json', 'data/anet/captiondata/para/anet_entities_val_2_para.json']
 criteria_for_best_ckpt: 'dvc'
 train_proposal_type: gt
