@@ -71,3 +71,4 @@ echo "End EXTRACT VIDEO FEATURES"
 #参数：mp4位置  特征输出位置  ckpt位置  中英文选择  
 #bash run_get_video_feature.sh /mnt/mp4video /home/lanyun/xjtu/cm/video-mamba-suite/video-mamba-suite/video-dense-captioning/data/custom /home/lanyun/xjtu/cm/video-mamba-suite/video-mamba-suite/video-dense-captioning/pretrain/model-best.pth en
 #bash run_get_video_feature.sh /mnt/mp4video /home/lanyun/xjtu/lyz/PDVC-lyz/data/custom /home/lanyun/xjtu/lyz/PDVC-lyz/model-best-anet.pth en
+# sh run_get_video_feature.sh /home/james/mp4video home/james/JA-PDVC/data/custom /home/james/JA-PDVC/model-best-anet.pth en
