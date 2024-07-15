@@ -16,3 +16,4 @@ av
 joblib
 tqdm
 google_trans_new
+opencv-python-headless
