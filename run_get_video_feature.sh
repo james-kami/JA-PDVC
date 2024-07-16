@@ -9,6 +9,7 @@ DATA_PATH=$1 # path of the raw video folder
 FEATURE_DIR=$2 # path of the output folder to save generated captions
 PDVC_MODEL_PATH=$3
 OUTPUT_LANGUAGE=$4
+BATCH_SIZE=4
 
 if [ -z "$DATA_PATH" ]; then
     echo "DATA_PATH variable is not set."
@@ -46,7 +47,7 @@ STRIDE=16
 SHARD_ID=0
 NUM_SHARDS=1
 DEVICE=cuda
-WORKER_NUM=8
+WORKER_NUM=4
 
 echo "START GENERATE METADATA"
 
@@ -65,6 +66,7 @@ CUDA_VISIBLE_DEVICES=0 python video_backbone/TSP/extract_features/extract_featur
 --device $DEVICE \
 --output-dir $FEATURE_DIR \
 --workers $WORKER_NUM \
+--batch-size $BATCH_SIZE \
 --local-checkpoint '/home/james/JA-PDVC/r2plus1d_34-tsp_on_activitynet-max_gvf-backbone_lr_0.0001-fc_lr_0.002-epoch_5-0d2cf854.pth'
 echo "End EXTRACT VIDEO FEATURES"
 #cn数据集全部转为MP4存在 /mnt/mp4video
