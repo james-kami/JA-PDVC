@@ -1,1 +1,19 @@
-{}
+{
+    "D01H14M44S00": {
+        "duration": 30.1,
+        "timestamps": [
+            [
+                3.75,
+                7.05
+            ],
+            [
+                7.1,
+                30.0
+            ]
+        ],
+        "sentences": [
+            "A man is walking.",
+            "A man is sitting down."
+        ]
+    }
+}

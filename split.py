@@ -6,7 +6,7 @@ out_path = '/home/james/JA-PDVC/data/custom'
 if not os.path.exists(out_path):
     os.mkdir(out_path)
 
-split_ratio = [70, 30]  # 70% training, 30% validation
+split_ratio = [90, 10]  # 70% training, 30% validation
 
 with open('/home/james/mp4video/all_anno.json', 'r', encoding='utf-8') as file:
     data = json.load(file)

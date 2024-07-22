@@ -2,6 +2,21 @@ visualization/videos/2024Y06M16D00H04M20S00.30.mp4
 save/
 save*
 *.hdf5
+# Ignore specific files
+home/james/in
+data/video_dataset_bak.py
+
+# Ignore all files in these directories
+data/custom/*.pkl
+in/
+out/
+split-bak.py
+visualization/output/r2plus1d_34-tsp_on_activitynet_stride_16/*.pkl
+visualization/output/vis_videos/*.mp4
+visualization/two_vids/
+visualization/videos/custom/
+
+
 *.pth
 *.npy
 data/anet/features/c3d
@@ -15,6 +30,19 @@ data/densevid_eval3
 *.pyc
 cfgs/proposal/debug/
 *.out
+# Ignore specific files
+data/video_dataset_bak.py
+home/james/JA-PDVC/data/custom/*.pkl
+
+# Ignore all files in these directories
+home/james/JA-PDVC/data/custom/
+home/james/in/
+home/james/out/
+split-bak.py
+visualization/output/r2plus1d_34-tsp_on_activitynet_stride_16/*.pkl
+visualization/output/vis_videos/*.mp4
+visualization/two_vids/
+visualization/videos/custom/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

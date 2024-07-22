@@ -201,7 +201,7 @@ def train(opt):
             if opt.device=='cuda':
                 torch.cuda.synchronize()
 
-            losses_log_every = int(len(train_loader) / 10)
+            losses_log_every = max(int(len(train_loader) / 10), 1)
 
             if opt.debug:
                 losses_log_every = 6

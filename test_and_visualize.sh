@@ -24,22 +24,22 @@ NUM_SHARDS=1
 DEVICE=cuda
 WORKER_NUM=8
 
-echo "START GENERATE METADATA"
-python video_backbone/TSP/data/generate_metadata_csv.py --video-folder $DATA_PATH --output-csv $METADATA_CSV_FILENAME
+#echo "START GENERATE METADATA"
+#python video_backbone/TSP/data/generate_metadata_csv.py --video-folder $DATA_PATH --output-csv $METADATA_CSV_FILENAME
 
 mkdir -p $FEATURE_DIR
 
-echo "START EXTRACT VIDEO FEATURES"
-python video_backbone/TSP/extract_features/extract_features.py \
---data-path $DATA_PATH \
---metadata-csv-filename $METADATA_CSV_FILENAME \
---released-checkpoint $RELEASED_CHECKPOINT \
---stride $STRIDE \
---shard-id $SHARD_ID \
---num-shards $NUM_SHARDS \
---device $DEVICE \
---output-dir $FEATURE_DIR \
---workers $WORKER_NUM
+#echo "START EXTRACT VIDEO FEATURES"
+#python video_backbone/TSP/extract_features/extract_features.py \
+#--data-path $DATA_PATH \
+#--metadata-csv-filename $METADATA_CSV_FILENAME \
+#--released-checkpoint $RELEASED_CHECKPOINT \
+#--stride $STRIDE \
+#--shard-id $SHARD_ID \
+#--num-shards $NUM_SHARDS \
+#--device $DEVICE \
+#--output-dir $FEATURE_DIR \
+#--workers $WORKER_NUM
 
 echo "START Dense-Captioning"
 python eval.py --eval_mode test \
@@ -55,3 +55,4 @@ python visualization/visualization.py \
 --output_mp4_folder $OUTPUT_FOLDER/vis_videos \
 --dvc_file $OUTPUT_FOLDER/generated_captions/dvc_results.json \
 --output_language $OUTPUT_LANGUAGE
+

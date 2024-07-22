@@ -1,15 +1,15 @@
 id: custom
 base_cfg_path: cfgs/anet_tsp_pdvc.yml
 
-epoch: 100
+epoch: 1000
 caption_decoder_type: standard
 pretrain: 'full'
-pretrain_path: '/home/james/JA-PDVC/model-best.pth'
+pretrain_path: '/home/james/JA-PDVC/save/custom_v_2024-07-16-11-48-44/model-best.pth'
 train_caption_file: '/home/james/JA-PDVC/data/custom/train_anno.json'
 val_caption_file: '/home/james/JA-PDVC/data/custom/val_anno.json'
-min_epoch_when_save : 0
+min_epoch_when_save : 10
 visual_feature_type: ['tsp']
-visual_feature_folder: ['/home/james/JA-PDVC/data/custom']
+visual_feature_folder: ['/home/james/JA-PDVC/home/james/JA-PDVC/data/custom']
 feature_dim: 512
 invalid_video_json: []
 train_proposal_file: data/generated_proposals/dbg_trainval_top100.json
@@ -23,8 +23,8 @@ sample_method: nearest
 
 batch_size: 1
 lr: 0.00005
-learning_rate_decay_start: 8
-learning_rate_decay_every: 3
+learning_rate_decay_start: 200
+learning_rate_decay_every: 100
 learning_rate_decay_rate: 0.5
 weight_decay: 0.0001
 save_all_checkpoint: 0
